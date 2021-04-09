@@ -93,7 +93,6 @@ int main( int argc, char *argv[] )
     const char *type = argv[2];
     int n; 
     printf("----------------------------\n");
-    printf("\x1b[36mVersion Beta 3.0\x1b[0m\n\n");
     int ttl = 0;
     if (strcmp(type, "d8") == 0 ){     //checks what type of dice
         for(n = 0; n < amount; n++){   //only rolls the amount of times specified.
