@@ -9,8 +9,8 @@ int main()
     srand(time(0));
     num = (rand() % (100 - 1 + 1)) + 1;
     if (num % 2 == 0){
-        printf("\x1b[35mHeads!\x1b[0m");
+        printf("\n\x1b[35mHeads!\x1b[0m\n");
     } else {
-        printf("\x1b[35mTails!\x1b[0m");
+        printf("\n\x1b[35mTails!\x1b[0m\n");
     }
 }
