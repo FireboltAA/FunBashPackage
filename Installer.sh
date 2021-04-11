@@ -37,8 +37,8 @@ gcc sourceGTN.c -o GTN
 rm sourceGTN.c
 chmod +x GTN
 
-#wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/sourceCode/sourceFlip.c"
-#gcc sourceFlip.c -o flip
-#rm sourceFlip.c
-#chmod +x flip
+wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/sourceCode/sourceFlip.c"
+gcc sourceFlip.c -o flip
+rm sourceFlip.c
+chmod +x flip
 source ~/.bashrc/bin/bash: bin/sh: No such file or directory
