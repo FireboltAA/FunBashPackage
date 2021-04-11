@@ -41,4 +41,4 @@ wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/sourc
 gcc sourceFlip.c -o flip
 rm sourceFlip.c
 chmod +x flip
-source ~/.bashrc/bin/bash: bin/sh: No such file or directory
+source ~/.bashrc
