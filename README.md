@@ -1,7 +1,16 @@
 # FunBashPackage
 Couple of fun bash commands
 
-**IMPORTANT**: Please note that the installation script modifies the path variable in a bad way that most people would not like. I made this when I was still learning, so for now, it's best to install it manually until the script is updated.
+## Installation
+Download and run the Installer.sh file
+```sh
+wget https://raw.githubusercontent.com/FireboltAA/FunBashPackage/master/Installer.sh
+bash Installer.sh
+```
+Follow instructions within the installer.
+
+(Please give feedback on the installer, it is experimental!)
+
 
 ## roll
 roll {amount} {type}
