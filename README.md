@@ -12,3 +12,6 @@ Returns heads or tails
 
 ## GTN
 Starts a guess the number game.
+
+## TODO
+> Rewrite dice roller to be more efficient and versatile (and not hot garbage).
