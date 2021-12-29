@@ -12,7 +12,6 @@ int main()
     num = (rand() % (upper - lower + 1) + lower);
     printf("--------------------------------------\n");
     printf("\x1b[32mGuess the number between 1 and 100. You have ten tries.\x1b[0m");
-    printf("%d\n", num);
     for(i = 0; i <= amount; i++){
         printf("\nGuess: ");
         scanf("%d", &guess);

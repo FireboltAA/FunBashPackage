@@ -1,44 +1,57 @@
 #! binb/sh
 
-if grep -Fxq "export PATH=\$PATH:/home/$USER/fun_package/" ~/.bashrc
+_true=1
+
+isCustDir=0
+
+execPathCMD="if [ -d \"\$HOME/.exec\" ] ; then\n    PATH=\"\$HOME/.exec:\$PATH\"\nfi"
+
+
+
+echo -e "Do you already have a personal directory in your PATH variable? If not, this program will\ncreate one for you. Otherwise, you can set any directory as long as it is in your PATH variable."
+
+read -p "|[y/n]: " -n 2 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
 then
-     echo -e "\x1b[33mDuplicate path found, Path not changed.\x1b[0m"
-else
-     cd
-     echo -e "\x1b[33mBacking up .bashrc to .bashrc.bak in directory /home/$USER/\x1b[0m . . ."
-     cp .bashrc .bashrc.bak
-     echo -e "\x1b[33mAdding path to .bashrc in directory /home/$USER/\x1b[0m . . ."
-     echo "export PATH=\$PATH:/home/$USER/fun_package/" >> ~/.bashrc
+        echo -e "Please input full path to a valid PATH directory (max 20 characters): "
+        read -n 20 -r
+        custDir=$REPLY
+        isCustDir=1
+elif [[ $REPLY =~ ^[Nn]$ ]]
+then
+        cd  
+        echo -e "Creating new directory \'.exec\'...\n"
+        mkdir .exec
+        echo -e "Creating command in .bashrc to add .exec folder to PATH...\n"
+        shopt -s xpg_echo
+        echo "$execPathCMD" >> /home/$USER/.bashrc
+        shopt -u xpg_echo
 fi
 
 
-if [[ -d "/home/$USER/fun_package" ]]
-then
-     echo -e  "Would you like to delete duplicate directory \"fun_package\"? (It is advised that you do if you have installed this package previously).\n"
-     read -p "[y/n]" -n 1 -r
-     echo -e "\n"
-     if [[ $REPLY =~ ^[Yy]$ ]]
-     then
-         echo -e "\x1b[33mRemoving directory \"fun_package/\"\x1b[0m . . ."
-         rm -rf fun_package/
-         echo -e "\x1b[33mMaking directory \"fun_package/\" in directory /home/$USER/\x1b[0m . . ."
-     fi
-fi
 
 cd
-cd fun_package
+
+if [ $isCustDir = $_true ]
+then
+        cd "$custDir"
+else
+        cd .exec
+fi
+
 wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/sourceCode/sourceRoll.c"
 gcc sourceRoll.c -o roll
 rm sourceRoll.c
 chmod +x roll
 
 wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/sourceCode/sourceGTN.c"
-gcc sourceGTN.c -o GTN
+gcc sourceGTN.c -o GTN 
 rm sourceGTN.c
-chmod +x GTN
+chmod +x GTN 
 
 wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/sourceCode/sourceFlip.c"
 gcc sourceFlip.c -o flip
 rm sourceFlip.c
 chmod +x flip
-source ~/.bashrc
+source $HOME/.bashrc
+
