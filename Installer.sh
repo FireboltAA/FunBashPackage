@@ -39,17 +39,17 @@ else
         cd .exec
 fi
 
-wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/sourceCode/sourceRoll.c"
+wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/cmds/Roll.c"
 gcc sourceRoll.c -o roll
 rm sourceRoll.c
 chmod +x roll
 
-wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/sourceCode/sourceGTN.c"
+wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/cmds/GTN.c"
 gcc sourceGTN.c -o GTN 
 rm sourceGTN.c
 chmod +x GTN 
 
-wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/sourceCode/sourceFlip.c"
+wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/cmds/Flip.c"
 gcc sourceFlip.c -o flip
 rm sourceFlip.c
 chmod +x flip
