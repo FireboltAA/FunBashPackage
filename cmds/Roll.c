@@ -7,68 +7,6 @@
 long int num = 0;
 int numOfMaxRolls = 0;
 
-
-int rollD4(){
-    int upper = 4, lower = 1;
-    num = (rand() % (upper - lower + 1)) + lower;
-    if (num == upper){
-        numOfMaxRolls = numOfMaxRolls + 1;
-    }
-    printf("%d\n", num);
-    return num;
-}
-
-
-int rollD6(){
-    int upper = 6, lower = 1;
-    num = (rand() % (upper - lower + 1)) + lower;
-    if (num == upper){
-        numOfMaxRolls = numOfMaxRolls + 1;
-    }
-    printf("%d\n", num);
-    return num; 
-}
-
-int rollD8(){
-    int upper = 8, lower = 1;
-    num = (rand() % (upper - lower + 1)) + lower;
-    if (num == upper){
-        numOfMaxRolls = numOfMaxRolls + 1;
-    }
-    printf("%d\n", num);
-    return num;
-}
-
-int rollD10(){
-    int upper = 10, lower = 1;
-    num = (rand() % (upper - lower + 1)) + lower;
-    if (num == upper){
-        numOfMaxRolls = numOfMaxRolls + 1;
-    }
-    printf("%d\n", num);
-    return num;
-}
-
-int rollD12(){
-    int upper = 12, lower = 1;
-    num = (rand() % (upper - lower + 1)) + lower;
-    if (num == upper){
-        numOfMaxRolls = numOfMaxRolls + 1;
-    }
-    printf("%d\n", num);
-    return num;
-}
-
-int rollD20(){
-    int upper = 20, lower = 1;
-    num = (rand() % (upper - lower + 1)) + lower;
-    if (num == upper){                      //calculates the amount of rolls that 
-        numOfMaxRolls = numOfMaxRolls + 1;  //are the maximum that dice can roll
-    }
-    printf("%d\n", num);
-    return num;
-}
-
 int rollD100(){
     int upper = 100, lower = 1;
     num = (rand() % (upper - lower + 1)) + lower;

@@ -40,18 +40,18 @@ else
 fi
 
 wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/cmds/Roll.c"
-gcc sourceRoll.c -o roll
-rm sourceRoll.c
+gcc Roll.c -o roll
+rm Roll.c
 chmod +x roll
 
 wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/cmds/GTN.c"
-gcc sourceGTN.c -o GTN 
-rm sourceGTN.c
+gcc GTN.c -o GTN 
+rm GTN.c
 chmod +x GTN 
 
 wget "https://raw.githubusercontent.com/HeroFirebolt/FunBashPackage/master/cmds/Flip.c"
-gcc sourceFlip.c -o flip
-rm sourceFlip.c
+gcc Flip.c -o flip
+rm Flip.c
 chmod +x flip
 source $HOME/.bashrc
 
